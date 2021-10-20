@@ -5,10 +5,10 @@ if 2 <= n <= 10:
     if (min(A) >= -100) and (max(A) <= 100):
         A.sort()
         highest = max(A)
-        for i in reversed(A):
-            if i == highest:
-                A.remove(max(A))
-        print(max(A))
+        for i in range(0, n):
+            if highest > A[i] > -100:
+                runners_up = A[i]
+        print(runners_up)
     else:
         exit()
 else:
